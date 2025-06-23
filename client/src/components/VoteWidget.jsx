@@ -9,7 +9,7 @@ export default function VoteWidget({ storyId, email }) {
   // Fetch vote count on load
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_API_BASE}/story/${storyId}/votes`)
+      .get(`${import.meta.env.VITE_API_BASE}/api/story/${storyId}/votes`)
       .then((res) => setVotes(res.data.votes))
       .catch((err) => {
         console.error('Failed to load votes:', err);
@@ -19,7 +19,7 @@ export default function VoteWidget({ storyId, email }) {
 
   const handleVote = async () => {
     try {
-      await axios.post(`${import.meta.env.VITE_API_BASE}/story-vote`, {
+      await axios.post(`${import.meta.env.VITE_API_BASE}/api/story-vote`, {
         storyId,
         email,
       });

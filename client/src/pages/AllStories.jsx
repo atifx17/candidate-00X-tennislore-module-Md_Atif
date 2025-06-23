@@ -6,7 +6,7 @@ export default function AllStories() {
   const [stories, setStories] = useState([]);
 
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_API_BASE}/stories`)
+    axios.get(`${import.meta.env.VITE_API_BASE}/api/stories`)
       .then((res) => setStories(res.data))
       .catch(() => console.error('Failed to load stories'));
   }, []);

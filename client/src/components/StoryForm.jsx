@@ -22,7 +22,7 @@ export default function StoryForm() {
     e.preventDefault();
 
     try {
-      await axios.post(`${import.meta.env.VITE_API_BASE}/story-submit`, formData);
+      await axios.post(`${import.meta.env.VITE_API_BASE}/api/story-submit`, formData);
       setMessage('✅ Story submitted!');
       setFormData({ name: '', email: '', date: '', story: '' });
     } catch (err) {

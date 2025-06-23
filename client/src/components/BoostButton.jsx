@@ -3,7 +3,7 @@ import axios from 'axios';
 export default function BoostButton({ storyId, email }) {
   const handleBoost = async () => {
     try {
-      const res = await axios.post(`${import.meta.env.VITE_API_BASE}/create-boost-session`, {
+      const res = await axios.post(`${import.meta.env.VITE_API_BASE}/api/create-boost-session`, {
         storyId,
         amount: 200,
         email,

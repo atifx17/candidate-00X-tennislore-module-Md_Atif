@@ -23,8 +23,8 @@ router.post('/create-boost-session', async (req, res) => {
         },
       ],
     mode: 'payment',
-    success_url: `http://localhost:5173/boost-success?storyId=${storyId}&email=${email}`,
-    cancel_url: `http://localhost:5173/boost-failed`,
+    success_url: `${process.env.CLIENT_URL}/boost-success?storyId=${storyId}&email=${email}`,
+    cancel_url: `${process.env.CLIENT_URL}/boost-failed`,
 
     });
 

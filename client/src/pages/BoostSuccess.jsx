@@ -11,7 +11,7 @@ export default function BoostSuccess() {
     const email = params.get('email');
 
     if (storyId && email) {
-      axios.get(`${import.meta.env.VITE_API_BASE}/boost-status`, {
+      axios.get(`${import.meta.env.VITE_API_BASE}/api/boost-status`, {
         params: { storyId, email }
       })
         .then(res => {
