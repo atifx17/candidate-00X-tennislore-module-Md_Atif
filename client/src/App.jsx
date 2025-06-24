@@ -3,8 +3,8 @@ import SubmitStory from './pages/SubmitStory';
 import BoostSuccess from './pages/BoostSuccess';
 import BoostFailed from './pages/BoostFailed';
 import StoryPage from './pages/StoryPage';
-import Home from './pages/Home'; // 👈 Add this
-import Profile from './pages/Profile'; // 👈 Add this
+import Home from './pages/Home';
+import Profile from './pages/Profile';
 import Navbar from './components/Navbar';
 import AllStories from './pages/AllStories';
 
